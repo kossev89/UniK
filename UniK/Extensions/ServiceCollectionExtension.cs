@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using UniK.Data;
+using UniK.Infrastructure.Data;
 
 namespace Micosoft.Extensions.DependencyInjection
 {

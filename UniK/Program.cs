@@ -1,7 +1,7 @@
 using Micosoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using UniK.Data;
+using UniK.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
