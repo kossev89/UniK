@@ -28,6 +28,11 @@ namespace UniK.Infrastructure.Constants
         public const int MaxBagLengthLength = 100;
         public const int MaxFilmMaterialLength = 100;
         public const int MaxImagePathLength = 500;
+        // Doser
+        public const int MaxHopperCapacityLength = 100;
+        public const int MaxDosingRangeLength = 100;
+        public const int MaxWeighingAccuracyLength = 100;
+        public const int MaxWorkingPrincipleLength = 100;
 
     }
 }

@@ -13,9 +13,6 @@ namespace UniK.Infrastructure.Data.Models
     public class PackagingMachine: ProductBase
     {
         [Required]
-        [MaxLength(Constants.DataConstants.MaxImagePathLength)]
-        public string ImagePath { get; set; }
-        [Required]
         [MaxLength(Constants.DataConstants.MaxFilmWidthLength)]
         public string FilmWidth { get; set; }
         [Required]

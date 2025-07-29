@@ -1,7 +1,6 @@
 ﻿namespace UniK.Infrastructure.Data.Models
 {
-    public class Bag
+    public class Product
     {
-
     }
 }

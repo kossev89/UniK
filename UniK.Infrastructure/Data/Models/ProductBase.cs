@@ -17,30 +17,43 @@ namespace UniK.Infrastructure.Data.Models
         [MaxLength(Constants.DataConstants.MaxModelLength)]
         public string Model { get; set; }
 
+        [Required]
+        [MaxLength(Constants.DataConstants.MaxImagePathLength)]
+        public string ImagePath { get; set; }
+
         public ICollection<ProductFeature> ProductFeatures { get; set; } = new List<ProductFeature>();
 
         // Common Specs
         [MaxLength(Constants.DataConstants.MaxConstructionLength)]
         public string Construction { get; set; }
+
         [MaxLength(Constants.DataConstants.MaxProductivityLength)]
         public string Productivity { get; set; }
+
         [MaxLength(Constants.DataConstants.MaxOverallDimensionsLength)]
         public string OverallDimensions { get; set; }
+
         [MaxLength(Constants.DataConstants.MaxWeightLength)]
         public string Weight { get; set; }
+
         [MaxLength(Constants.DataConstants.MaxInterfaceLength)]
         public string Interface { get; set; }
+
         [MaxLength(Constants.DataConstants.MaxDrivingLength)]
         public string Driving { get; set; }
+
         [Required]
         [MaxLength(Constants.DataConstants.MaxElectricalSupplyLength)]
         public string ElectricalSupply { get; set; }
+
         [Required]
         [MaxLength(Constants.DataConstants.MaxInstalledPowerLength)]
         public string InstalledPower { get; set; }
+
         [Required]
         [MaxLength(Constants.DataConstants.MaxCompressedAirConsumptionLength)]
         public string CompressedAirConsumption { get; set; }
+
         [MaxLength(Constants.DataConstants.MaxElectronicsLength)]
         public string Electronics { get; set; }
     }
