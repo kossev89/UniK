@@ -33,6 +33,20 @@ namespace UniK.Infrastructure.Constants
         public const int MaxDosingRangeLength = 100;
         public const int MaxWeighingAccuracyLength = 100;
         public const int MaxWorkingPrincipleLength = 100;
+        //OutputBelt
+        public const int MaxBeltWidthLength = 100;
+        public const int MaxBeltLengthLength = 100;
+        public const int MaxBeltMaterialLength = 100;
+        public const int MaxSpeedLength = 100;
+        //RotaryTable
+        public const int MaxRotatingSpeedLength = 100;
+        //MetalDetector
+        public const int MaxDetectionDiameterLength = 100;
+        public const int MaxDetectionSpeedLength = 100;
+        public const int MaxDetectionSensitivityLength = 100;
+        public const int MaxOutputSignalLength = 100;
+        public const int MaxRejectorLength = 100;
+
 
     }
 }

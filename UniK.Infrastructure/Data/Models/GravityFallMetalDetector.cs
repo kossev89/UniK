@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace UniK.Infrastructure.Data.Models
 {
-    [Comment("Base class for all products, containing common properties and specifications. This class is not intended to be instantiated directly, but rather serves as a base for specific product types. It includes properties that are common across different product types, such as construction, productivity, dimensions, weight, interface, driving mechanism, electrical supply, installed power, compressed air consumption, and electronics.")]
-    public abstract class ProductBase
+    public class GravityFallMetalDetector
     {
         [Key]
         public int Id { get; init; }
@@ -20,18 +18,25 @@ namespace UniK.Infrastructure.Data.Models
         [Required]
         [MaxLength(Constants.DataConstants.MaxImagePathLength)]
         public string ImagePath { get; set; } = string.Empty;
-
         public ICollection<ProductFeature> ProductFeatures { get; set; } = new List<ProductFeature>();
-
         // Common Specs
         [MaxLength(Constants.DataConstants.MaxConstructionLength)]
         public string Construction { get; set; } = string.Empty;
 
+        [Required]
+        [MaxLength(Constants.DataConstants.MaxDetectionDiameterLength)]
+        public string DetectionDiameter { get; set; } = string.Empty;
 
-        [MaxLength(Constants.DataConstants.MaxProductivityLength)]
-        public string Productivity { get; set; } = string.Empty;
+        [Required]
+        [MaxLength(Constants.DataConstants.MaxDetectionSpeedLength)]
+        public string DetectionSpeed { get; set; } = string.Empty;
 
+        [Required]
+        [MaxLength(Constants.DataConstants.MaxDetectionSensitivityLength)]
+        public string DetectionSensitivity { get; set; } = string.Empty;
 
+        [MaxLength(Constants.DataConstants.MaxOutputSignalLength)]
+        public string OutputSignal { get; set; } = string.Empty;
         [MaxLength(Constants.DataConstants.MaxOverallDimensionsLength)]
         public string OverallDimensions { get; set; } = string.Empty;
 
@@ -65,5 +70,8 @@ namespace UniK.Infrastructure.Data.Models
 
         [MaxLength(Constants.DataConstants.MaxElectronicsLength)]
         public string Electronics { get; set; } = string.Empty;
+
+        [MaxLength(Constants.DataConstants.MaxRejectorLength)]
+        public string Rejector { get; set; } = string.Empty;
     }
 }
