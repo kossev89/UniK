@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace UniK.Infrastructure.Data.Models
 {
-    [Comment("Base class for all products, containing common properties and specifications. This class is not intended to be instantiated directly, but rather serves as a base for specific product types. It includes properties that are common across different product types, such as construction, productivity, dimensions, weight, interface, driving mechanism, electrical supply, installed power, compressed air consumption, and electronics.")]
-    public abstract class ProductBase
+    public class BeltMetalDetector
     {
         [Key]
         public int Id { get; init; }
@@ -20,25 +18,29 @@ namespace UniK.Infrastructure.Data.Models
         [Required]
         [MaxLength(Constants.DataConstants.MaxImagePathLength)]
         public string ImagePath { get; set; } = string.Empty;
-
         public ICollection<Feature> ProductFeatures { get; set; } = new List<Feature>();
-
+        public ICollection<Video> Videos { get; set; } = new List<Video>();
         // Common Specs
         [MaxLength(Constants.DataConstants.MaxConstructionLength)]
         public string Construction { get; set; } = string.Empty;
 
-        public int Productivity { get; set; }
-        public int OverallLength { get; set; }
-        public int OverallWidth { get; set; }
-        public int OverallHeight { get; set; }
-        public int Weight { get; set; }
+        [Required]
+        public int ScanningTunnelWidth { get; set; }
 
-        [MaxLength(Constants.DataConstants.MaxInterfaceLength)]
-        public string Interface { get; set; } = string.Empty;
+        [Required]
+        public int ScanningTunnelHeight { get; set; }
 
-        [MaxLength(Constants.DataConstants.MaxDrivingLength)]
-        public string Driving { get; set; } = string.Empty;
+        [Required]
+        public int BeltSpeed { get; set; }
+        [Required]
+        public int BeltWidth { get; set; }
 
+        [Required]
+        [MaxLength(Constants.DataConstants.MaxDetectionSensitivityLength)]
+        public string DetectionSensitivity { get; set; } = string.Empty;
+
+        [MaxLength(Constants.DataConstants.MaxOutputSignalLength)]
+        public string OutputSignal { get; set; } = string.Empty;
         [Required]
         public int ElectricalVoltage { get; set; }
         [Required]
@@ -50,7 +52,16 @@ namespace UniK.Infrastructure.Data.Models
         [Required]
         public int CompressedAirConsumption { get; set; }
 
+        [MaxLength(Constants.DataConstants.MaxInterfaceLength)]
+        public string Interface { get; set; } = string.Empty;
+
+        [MaxLength(Constants.DataConstants.MaxDrivingLength)]
+        public string Driving { get; set; } = string.Empty;
+
         [MaxLength(Constants.DataConstants.MaxElectronicsLength)]
         public string Electronics { get; set; } = string.Empty;
+
+        [MaxLength(Constants.DataConstants.MaxRejectorLength)]
+        public string Rejector { get; set; } = string.Empty;
     }
 }

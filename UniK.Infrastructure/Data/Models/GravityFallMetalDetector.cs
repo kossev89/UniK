@@ -18,19 +18,17 @@ namespace UniK.Infrastructure.Data.Models
         [Required]
         [MaxLength(Constants.DataConstants.MaxImagePathLength)]
         public string ImagePath { get; set; } = string.Empty;
-        public ICollection<ProductFeature> ProductFeatures { get; set; } = new List<ProductFeature>();
+        public ICollection<Feature> ProductFeatures { get; set; } = new List<Feature>();
+        public ICollection<Video> Videos { get; set; } = new List<Video>();
         // Common Specs
         [MaxLength(Constants.DataConstants.MaxConstructionLength)]
         public string Construction { get; set; } = string.Empty;
 
         [Required]
-        [MaxLength(Constants.DataConstants.MaxDetectionDiameterLength)]
-        public string DetectionDiameter { get; set; } = string.Empty;
+        public int DetectionDiameter { get; set; }
 
         [Required]
-        [MaxLength(Constants.DataConstants.MaxDetectionSpeedLength)]
-        public string DetectionSpeed { get; set; } = string.Empty;
-
+        public int DetectionSpeed { get; set; }
         [Required]
         [MaxLength(Constants.DataConstants.MaxDetectionSensitivityLength)]
         public string DetectionSensitivity { get; set; } = string.Empty;
@@ -38,35 +36,27 @@ namespace UniK.Infrastructure.Data.Models
         [MaxLength(Constants.DataConstants.MaxOutputSignalLength)]
         public string OutputSignal { get; set; } = string.Empty;
         [MaxLength(Constants.DataConstants.MaxOverallDimensionsLength)]
-        public string OverallDimensions { get; set; } = string.Empty;
-
-
-        [MaxLength(Constants.DataConstants.MaxWeightLength)]
-        public string Weight { get; set; } = string.Empty;
-
+        public int OverallLength { get; set; }
+        public int OverallWidth { get; set; }
+        public int OverallHeight { get; set; }
+        public int Weight { get; set; }
 
         [MaxLength(Constants.DataConstants.MaxInterfaceLength)]
         public string Interface { get; set; } = string.Empty;
 
-
         [MaxLength(Constants.DataConstants.MaxDrivingLength)]
         public string Driving { get; set; } = string.Empty;
 
+        [Required]
+        public int ElectricalVoltage { get; set; }
+        [Required]
+        public int ElectricalFrequency { get; set; }
 
         [Required]
-        [MaxLength(Constants.DataConstants.MaxElectricalSupplyLength)]
-        public string ElectricalSupply { get; set; } = string.Empty;
-
+        public int InstalledPower { get; set; }
 
         [Required]
-        [MaxLength(Constants.DataConstants.MaxInstalledPowerLength)]
-        public string InstalledPower { get; set; } = string.Empty;
-
-
-        [Required]
-        [MaxLength(Constants.DataConstants.MaxCompressedAirConsumptionLength)]
-        public string CompressedAirConsumption { get; set; } = string.Empty;
-
+        public int CompressedAirConsumption { get; set; }
 
         [MaxLength(Constants.DataConstants.MaxElectronicsLength)]
         public string Electronics { get; set; } = string.Empty;

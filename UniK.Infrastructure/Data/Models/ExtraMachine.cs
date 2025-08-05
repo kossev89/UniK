@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace UniK.Infrastructure.Data.Models
 {
-    public class RotaryTable : AuxuliaryEquipment
+    public class ExtraMachine: ExtraBase
     {
-        [Required]
-        public int RotatingSpeed { get; set; }
+        public ICollection<PackagingMachine> Machines { get; set; } = new List<PackagingMachine>();
     }
 }

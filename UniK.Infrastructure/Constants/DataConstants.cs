@@ -46,6 +46,13 @@ namespace UniK.Infrastructure.Constants
         public const int MaxDetectionSensitivityLength = 100;
         public const int MaxOutputSignalLength = 100;
         public const int MaxRejectorLength = 100;
+        // FeedingConveyor
+        public const int MaxConveyorTypeLength = 100;
+        // Bag
+        public const int MaxTitleLength = 200;
+        public const int MaxDescriptionLength = 2000;
+        // Feature
+        public const int MaxFeatureTitleLength = 200;
 
 
     }

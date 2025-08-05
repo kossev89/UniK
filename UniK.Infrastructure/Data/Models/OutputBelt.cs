@@ -10,16 +10,13 @@ namespace UniK.Infrastructure.Data.Models
     public class OutputBelt : AuxuliaryEquipment
     {
         [Required]
-        [MaxLength(Constants.DataConstants.MaxBeltWidthLength)]
-        public string BeltWidth { get; set; } = string.Empty;
+        public int BeltWidth { get; set; }
         [Required]
-        [MaxLength(Constants.DataConstants.MaxBeltLengthLength)]
-        public string BeltLength { get; set; } = string.Empty;
+        public int BeltLength { get; set; }
         [Required]
         [MaxLength(Constants.DataConstants.MaxBeltMaterialLength)]
         public string BeltMaterial { get; set; } = string.Empty;
         [Required]
-        [MaxLength(Constants.DataConstants.MaxSpeedLength)]
-        public string Speed { get; set; } = string.Empty;
+        public int Speed { get; set; }
     }
 }

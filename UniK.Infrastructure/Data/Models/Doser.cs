@@ -11,14 +11,14 @@ namespace UniK.Infrastructure.Data.Models
     {
         public ICollection<PackagingMachine> CompatiblePackagingMachines { get; set; } = new List<PackagingMachine>();
         public ICollection<Product> SuitableProducts { get; set; } = new List<Product>();
-        public ICollection<Extra> Extras { get; set; } = new List<Extra>();
+        public ICollection<ExtraDoser> Extras { get; set; } = new List<ExtraDoser>();
         public ICollection<Video> Videos { get; set; } = new List<Video>();
         [Required]
-        [MaxLength(Constants.DataConstants.MaxHopperCapacityLength)]
-        public string HopperCapacity { get; set; } = string.Empty;
+        public int HopperCapacity { get; set; }
         [Required]
-        [MaxLength(Constants.DataConstants.MaxDosingRangeLength)]
-        public string DosingRange { get; set; } = string.Empty;
+        public int MinimumDose { get; set; }
+        [Required]
+        public int MaximumDose { get; set; }
         [Required]
         [MaxLength(Constants.DataConstants.MaxWeighingAccuracyLength)]
         public string WeighingAccuracy { get; set; } = string.Empty;

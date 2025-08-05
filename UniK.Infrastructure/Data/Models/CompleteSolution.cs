@@ -1,6 +1,6 @@
 ﻿namespace UniK.Infrastructure.Data.Models
 {
-    public class Extra
+    public class CompleteSolution
     {
     }
 }
