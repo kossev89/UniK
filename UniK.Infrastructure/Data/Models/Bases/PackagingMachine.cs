@@ -5,10 +5,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UniK.Infrastructure.Data.Models;
 using UniK.Infrastructure.Constants;
 
-namespace UniK.Infrastructure.Data.Models
+namespace UniK.Infrastructure.Data.Models.Bases
 {
     public class PackagingMachine : ProductBase
     {
@@ -28,7 +27,7 @@ namespace UniK.Infrastructure.Data.Models
         public int MaxBagLength { get; set; }
 
         [Required]
-        [MaxLength(Constants.DataConstants.MaxFilmMaterialLength)]
+        [MaxLength(DataConstants.MaxFilmMaterialLength)]
         public string FilmMaterial { get; set; } = string.Empty;
         public ICollection<Doser> CompatibleDosers { get; set; } = new List<Doser>();
         public ICollection<Bag> BagTypes { get; set; } = new List<Bag>();

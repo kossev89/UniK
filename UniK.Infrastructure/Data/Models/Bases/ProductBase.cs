@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniK.Infrastructure.Data.Models
+namespace UniK.Infrastructure.Data.Models.Bases
 {
     [Comment("Base class for all products, containing common properties and specifications. This class is not intended to be instantiated directly, but rather serves as a base for specific product types. It includes properties that are common across different product types, such as construction, productivity, dimensions, weight, interface, driving mechanism, electrical supply, installed power, compressed air consumption, and electronics.")]
     public abstract class ProductBase

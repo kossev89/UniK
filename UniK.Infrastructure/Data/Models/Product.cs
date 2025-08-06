@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using UniK.Infrastructure.Constants;
+using UniK.Infrastructure.Data.Models.Bases;
 
 namespace UniK.Infrastructure.Data.Models
 {

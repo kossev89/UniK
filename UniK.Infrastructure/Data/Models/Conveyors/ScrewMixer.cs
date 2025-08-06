@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using UniK.Infrastructure.Data.Models.Bases;
 
-namespace UniK.Infrastructure.Data.Models
+namespace UniK.Infrastructure.Data.Models.Conveyors
 {
-    public class ExtraDoser : ExtraBase
+    public class ScrewMixer: FeedingConveyor
     {
-        public ICollection<Doser> Dosers { get; set; } = new List<Doser>();
     }
 }

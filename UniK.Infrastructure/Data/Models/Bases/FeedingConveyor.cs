@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UniK.Infrastructure.Constants;
 
-namespace UniK.Infrastructure.Data.Models
+namespace UniK.Infrastructure.Data.Models.Bases
 {
     public class FeedingConveyor: ProductBase
     {

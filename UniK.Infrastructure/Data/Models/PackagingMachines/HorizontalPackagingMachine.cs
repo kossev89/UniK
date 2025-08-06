@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using UniK.Infrastructure.Data.Models.Bases;
 
-namespace UniK.Infrastructure.Data.Models
+namespace UniK.Infrastructure.Data.Models.PackagingMachines
 {
-    public class ExtraDoser : ExtraBase
+    public class HorizontalPackagingMachine: PackagingMachine
     {
-        public ICollection<Doser> Dosers { get; set; } = new List<Doser>();
     }
 }

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UniK.Infrastructure.Data.Models.Bases;
 
-namespace UniK.Infrastructure.Data.Models
+namespace UniK.Infrastructure.Data.Models.Dosers
 {
-    public abstract class AuxuliaryEquipment: ProductBase
+    public class FillingMachine : Doser
     {
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using UniK.Infrastructure.Constants;
+using UniK.Infrastructure.Data.Models.Bases;
 
 namespace UniK.Infrastructure.Data.Models
 {
@@ -29,11 +30,6 @@ namespace UniK.Infrastructure.Data.Models
 
         public int? ProductId { get; set; }
         public Product Product { get; set; }
-
-
-
-
-
         public ICollection<Feature> Features { get; init; } = new List<Feature>();
 
     }

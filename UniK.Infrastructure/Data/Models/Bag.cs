@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Query.Internal;
 using System.ComponentModel.DataAnnotations;
+using UniK.Infrastructure.Data.Models.Bases;
 
 namespace UniK.Infrastructure.Data.Models
 {
